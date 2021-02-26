@@ -31,15 +31,15 @@ CREATE TABLE Album
 CREATE TABLE Estilo 
 (
 	idEstilo INT PRIMARY KEY IDENTITY
-	,Nome	VARCHAR(200) NOT NULL
+	,Nome	 VARCHAR(200) NOT NULL
 );
 
 
 CREATE TABLE AlbumEstilo
 (
-	idAlbum   INT PRIMARY KEY IDENTITY 
+	idAlbum   INT FOREIGN KEY REFERENCES Album (idAlbum)
 	,idEstilo INT FOREIGN KEY REFERENCES Estilo (idEstilo)
 );
 
-USE Plataformaoptus
+
 
