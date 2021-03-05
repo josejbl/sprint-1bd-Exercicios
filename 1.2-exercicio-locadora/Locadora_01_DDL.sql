@@ -25,14 +25,14 @@ CREATE TABLE Veiculo
 	idVeiculo  INT PRIMARY KEY IDENTITY 
 	,idEmpresa INT FOREIGN KEY REFERENCES Empresa (idEmpresa)
 	,idModelo  INT FOREIGN KEY REFERENCES Modelo (idModelo)
-	,Placa     INT NOT NULL
+	,Placa     CHAR(7) NOT NULL
 );
 
 CREATE TABLE Cliente 
 (
 	idCliente  INT PRIMARY KEY IDENTITY 
 	,Nome      VARCHAR (200) NOT NULL
-	,CPF       INT NOT NULL
+	,CPF       CHAR(11) NOT NULL
 	
 );
 CREATE TABLE Aluguel 
@@ -40,7 +40,7 @@ CREATE TABLE Aluguel
 	idAluguel  INT PRIMARY KEY IDENTITY 
 	,idVeiculo INT FOREIGN KEY REFERENCES Veiculo (idVeiculo)
 	,idCliente INT  FOREIGN KEY REFERENCES Cliente (idcliente)
-	,Valor     INT NOT NULL 
+	,Valor     DECIMAL NOT NULL 
 );
 
 

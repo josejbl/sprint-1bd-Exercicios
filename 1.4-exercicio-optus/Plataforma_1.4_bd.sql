@@ -41,5 +41,6 @@ CREATE TABLE AlbumEstilo
 	,idEstilo INT FOREIGN KEY REFERENCES Estilo (idEstilo)
 );
 
+USE [Dados de cadastro]
 
-
+SELECT * FROM Pasta1
